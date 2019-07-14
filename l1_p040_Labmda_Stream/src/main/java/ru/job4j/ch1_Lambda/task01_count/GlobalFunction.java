@@ -13,13 +13,13 @@ public class GlobalFunction {
      * @param func your lambda function
      * @return result
      */
-    /*List<Double> diapason(int start, int end, java.util.function.Function<Double, Double> func) {
+    List<Double> diapason(int start, int end, java.util.function.Function<Double, Double> func) {
         List<Double> range = new ArrayList<>();
         for (int i = start; i < end; i++) {
             range.add(func.apply((double) i));
         }
         return range;
-    }*/
+    }
 
 }
 

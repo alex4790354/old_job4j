@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 
 public class GlobalFunctionTest {
 
-    /*@Test
+    @Test
     public void whenLinerFunctionThenLinerResult() {
         GlobalFunction globalFunction = new GlobalFunction();
         List<Double> result = globalFunction.diapason(2, 7, x -> 2 * x + 1);
@@ -33,6 +33,6 @@ public class GlobalFunctionTest {
         List<Double> result = globalFunction.diapason(5, 8, x -> (double) ((int)(Math.log(x) * 100)) / 100);
         List<Double> expected = Arrays.asList(1.6D, 1.79D, 1.94D);
         assertThat(result, is(expected));
-    }*/
+    }
 
 }
