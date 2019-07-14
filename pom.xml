@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ru.job4j</groupId>
+    <artifactId>avasiliev3</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <version>1.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+    </dependencies>
+
+    <modules>
+        <module>l1_p020_OOP</module>
+        <module>l1_p030_tsk3_Sorting</module> <!-- delete -->
+        <module>l1_p030_Collections_Lite</module>
+        <module>l1_p030_Collections_Lite</module>
+        <module>l1_p040_Labmda_Stream</module>
+
+        <module>l2_p040_tsk1_webProject</module>
+        <module>l2_p040_tsk4_JSP_test</module>
+
+        <module>l3_p020_tsk3_Spring_Data</module>
+        <module>l3_p030_tsk1_IO</module>
+
+        <module>l3_p040_tsk2_010_CarsAds</module>
+
+
+    </modules>
+
+</project>

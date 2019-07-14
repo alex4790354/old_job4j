@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.2">
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\java\ru\job4j\cars21\beans\CarAdsStorage.java">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\java\ru\job4j\cars21\beans\CarBrandsStorage.java">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\java\ru\job4j\cars21\logics\Ads.java">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\java\ru\job4j\cars21\logics\CarAds.java">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\java\ru\job4j\cars21\logics\CarBrands.java">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\java\ru\job4j\cars21\models\CarAd.java">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\java\ru\job4j\cars21\models\CarBrand.java">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\java\ru\job4j\controller\UserController.java">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\java\ru\job4j\ioc00\MemoryStorage00.java">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\java\ru\job4j\ioc00\Storage00.java">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\java\ru\job4j\ioc00\User00.java">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\java\ru\job4j\ioc00\UserStorage00.java">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\java\ru\job4j\ioc01\MemoryStorage01.java">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\java\ru\job4j\ioc01\Storage01.java">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\java\ru\job4j\ioc01\User01.java">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\java\ru\job4j\ioc01\UserStorage01.java">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\java\ru\job4j\ioc02\ImportUser.java">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\java\ru\job4j\ioc02\models\package-info.java">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\java\ru\job4j\ioc02\models\User.java">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\java\ru\job4j\ioc02\storage02\JdbcStorage.java">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\java\ru\job4j\ioc02\storage02\MemoryStorage.java">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\java\ru\job4j\ioc02\storage02\package-info.java">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\java\ru\job4j\ioc02\storage02\Storage.java">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\java\ru\job4j\ioc02\storage02\UserStorage.java">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\test\java\ru\job4j\cars21\beans\AllCarsAdsTest.java">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\test\java\ru\job4j\ioc00\User00StorageTest.java">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\resources\cars21\connection21.cars_ad.properties">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\resources\cars21\connection21.cars_brand.properties">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\resources\cars21\connection21.cars_photos.properties">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\resources\connection01.properties">
+</file>
+<file name="C:\projects\avasiliev3\premiddle_002\src\main\resources\log4j.properties">
+</file>
+</checkstyle>

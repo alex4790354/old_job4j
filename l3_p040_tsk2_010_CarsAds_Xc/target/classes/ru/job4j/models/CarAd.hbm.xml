@@ -1,0 +1,25 @@
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping">
+    <class name="ru.job4j.models.CarAd" table="cars_ads" lazy="false">
+        <id name="id" column="id">
+            <generator class="identity"/>
+        </id>
+        <property name="carsBrandId" column="cars_brand_id"/>
+        <property name="carsModelId" column="cars_model_id"/>
+        <property name="carsBodyTypeId" column="cars_body_type_id"/>
+        <property name="carsTransmissionId" column="cars_transmission_id"/>
+        <property name="carsEngineTypeId" column="cars_engine_type_id"/>
+        <property name="carsDriveUnitId" column="cars_drive_unit_id"/>
+        <property name="mileage" column="mileage"/>
+        <property name="description" column="description"/>
+        <property name="userId" column="user_id"/>
+        <property name="photoId" column="photo_id"/>
+        <property name="status" column="status"/>
+        <property name="insertedDate" column="inserted_date"/>
+    </class>
+</hibernate-mapping>
+
+
+
+
+
+

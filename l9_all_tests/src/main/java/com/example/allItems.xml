@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bookstore>
+    <bookList>
+        <book id="123" reviewer="ranjeet kumar jha">
+            <author>Ranjeet</author>
+            <bookName>Real-time Analytics with Storm and Cassandra</bookName>
+        </book>
+        <book id="124" reviewer="ranjeet Jha">
+            <author>Ranjeet</author>
+            <bookName>Apache Cassandra Essential</bookName>
+        </book>
+    </bookList>
+    <location>South Ex, Delhi</location>
+    <name>Book Mark</name>
+</bookstore>

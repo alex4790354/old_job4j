@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/data/jpa
+                           http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+
+    <!--@Transaction annotation support -->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <!--Обеспечивает работу с транзакциями в Spring -->
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="emf"/>
+    </bean>
+
+    <!-- EntityManagerFactory -->
+    <bean id="emf" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <!--Поставщик данных - hibernate-->
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+        </property>
+        <!--поиск сущностей в этом пакете-->
+        <property name="packagesToScan" value="ru.job4j.tsk3_example"/>
+    </bean>
+
+    <!-- Datasource. Источник данных - база MySQL -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="org.postgresql.Driver"/>
+        <property name="url" value="jdc:postgresql://127.0.0.1:5432/cars01"/>
+        <property name="username" value="alex"/>
+        <property name="password" value="password"/>
+    </bean>
+
+    <!--Activates various annotations to be detected in bean classes: Spring's @Required and @Autowired and so on-->
+    <context:annotation-config/>
+
+    <!--Scanning components in base-package (look for annotations) -->
+    <context:component-scan base-package="ru.job4j.tsk3_example"/>
+
+    <!-- Need for Repository abstraction -->
+    <jpa:repositories base-package="ru.job4j.tsk3_example.repository"
+         entity-manager-factory-ref="emf" transaction-manager-ref="transactionManager"/>
+
+</beans>
