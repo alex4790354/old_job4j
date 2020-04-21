@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>Save CarAd</title>
+</head>
+
+<body>
+
+	<div class="container">
+	
+		<h3>customer Directory</h3>
+		<hr>
+		
+		<p class="h4 mb-4">Save CarsAd</p>
+	
+		<form action="#" th:action="@{/carsad/save}" th:object="${carsAd}" method="POST">
+		
+			<!-- Add hidden form field to handle update -->
+			<input type="hidden" th:field="*{id}"/>
+			<input type="hidden" th:field="*{userId}"/>
+			<input type="hidden" th:field="*{photoId}"/>
+			<input type="hidden" th:field="*{status}"/>
+
+			<!--<input type="text" th:field="*{carsBrandId}" class="form-control mb-4 col-4" placeholder="BrandName">  ${pCarsBrand.id == carsBrand.id}   -->
+
+			<label>Brand</label>
+			<select th:field="*{carsBrandId}" class="form-control mb-4 col-4" name="carsBrandId">
+							<option th:each="lCarsBrand : ${carsBrands}"
+						th:value="${lCarsBrand.id}"
+						th:selected="${lCarsBrand.id.equals(carsBrandId)}"
+						th:text="${lCarsBrand.name}">Each</option>
+			</select>
+
+			<label>Model</label>
+			<select th:field="*{carsModelId}" class="form-control mb-4 col-4" name="carsModelId">
+				<option th:each="carsmodel : ${carsModels}"
+						th:value="${carsmodel.id}"
+						th:selected="${carsmodel.id.equals(carsModelId)}"
+						th:text="${carsmodel.name}">Each</option>
+			</select>
+
+			<label>Body Type</label>
+			<select th:field="*{carsBodyTypeId}" class="form-control mb-4 col-4" name="carsBodyTypeId">
+				<option th:each="carsBodyType : ${carsBodyTypes}"
+						th:value="${carsBodyType.id}"
+						th:selected="${carsBodyType.id.equals(carsBodyTypeId)}"
+						th:text="${carsBodyType.name}">Each</option>
+			</select>
+
+			<label>Transmission</label>
+			<select th:field="*{carsTransmissionId}" class="form-control mb-4 col-4" name="carsTransmissionId">
+				<option th:each="carsTransmission : ${carsTransmissions}"
+						th:value="${carsTransmission.id}"
+						th:selected="${carsTransmission.id.equals(carsTransmissionId)}"
+						th:text="${carsTransmission.name}">Each</option>
+			</select>
+
+			<label>Engine Type</label>
+			<select th:field="*{carsEngineTypeId}" class="form-control mb-4 col-4" name="carsEngineTypeId">
+				<option th:each="carsEngineType : ${carsEngineTypes}"
+						th:value="${carsEngineType.id}"
+						th:selected="${carsEngineType.id.equals(carsEngineTypeId)}"
+						th:text="${carsEngineType.name}">Each</option>
+			</select>
+
+			<label>Drive Unit</label>
+			<select th:field="*{carsDriveUnitId}" class="form-control mb-4 col-4" name="carsEngineTypeId">
+				<option th:each="carsDriveUnit : ${carsDriveUnits}"
+						th:value="${carsDriveUnit.id}"
+						th:selected="${carsDriveUnit.id.equals(carsDriveUnitId)}"
+						th:text="${carsDriveUnit.name}">Each</option>
+			</select>
+
+			<label>Milage 	<br/>
+				<input type="text" th:field="*{mileage}" />
+			</label> <br/>
+
+			<label>Description 	<br/>
+				<input type="text" th:field="*{description}" />
+			</label> <br/>
+
+
+			<!--<input type="text" th:field="*{carsModelId}" class="form-control mb-4 col-4" placeholder="Last name">-->
+
+			<button type="submit" class="btn btn-info col-2">Save</button>
+						
+		</form>
+	
+		<hr>
+		<a th:href="@{/carsad/list}">Back to Ads List</a>
+		
+	</div>
+</body>
+
+</html>
+
+
+
+

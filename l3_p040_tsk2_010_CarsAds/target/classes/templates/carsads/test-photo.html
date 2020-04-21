@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Test photo upload</title>
+</head>
+<body>
+
+<div>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <button type="submit">Добавить</button>
+    </form>
+</div>
+
+<div>
+    <img src="/img/1.jpg" th:attr="with='200px'" title="## 1">
+</div>
+
+<div>
+    <img th:attr="src='/img/1.jpg', title='Hello world',
+                    	    with='100px', height='100px'" src="../../static/images/cars/1.jpg" alt="All photos"/>
+</div>
+
+</body>
+</html>
