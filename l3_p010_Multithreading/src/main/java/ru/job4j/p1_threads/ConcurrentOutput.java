@@ -1,4 +1,4 @@
-package job4j.p1_threads;
+package ru.job4j.p1_threads;
 
 public class ConcurrentOutput {
 
