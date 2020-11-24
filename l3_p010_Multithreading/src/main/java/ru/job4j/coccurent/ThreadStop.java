@@ -2,6 +2,8 @@ package ru.job4j.coccurent;
 
 class ConsoleProgress implements Runnable {
 
+    String[] messageEnd = {"-", "/", "|", "\\"};
+
     @Override
     public void run() {
         int index = 0;
@@ -10,14 +12,7 @@ class ConsoleProgress implements Runnable {
             while (!Thread.currentThread().isInterrupted()) {
                 index++;
                 Thread.sleep(100);
-                if (index % 4 == 0)
-                    System.out.print("\rLoading : -");
-                else if (index % 4 == 1)
-                    System.out.print("\rLoading : /");
-                else if (index % 4 == 2)
-                    System.out.print("\rLoading : |");
-                else if (index % 4 == 3)
-                    System.out.print("\rLoading : \\");
+                System.out.print("\rLoading : " + messageEnd[index % 4]);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -35,7 +30,6 @@ public class ThreadStop {
         progress.start();
         Thread.sleep(5000); /* симулируем выполнение параллельной задачи в течение 1 секунды. */
         progress.interrupt(); //
-
 
     }
 

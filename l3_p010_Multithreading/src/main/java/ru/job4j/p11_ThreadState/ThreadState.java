@@ -16,13 +16,10 @@ public class ThreadState {
         System.out.println("Second: " + second.getState());
         second.start();
 
-
         while (first.getState() != Thread.State.TERMINATED || second.getState() != Thread.State.TERMINATED) {
             System.out.println("In loop. first.getState:" + first.getState() + ", second.getState: " + second.getState());
         }
-
         System.out.println("Last. first.getState: " + first.getState() + ", second.getState: " + second.getState());
-
     }
 
 }
