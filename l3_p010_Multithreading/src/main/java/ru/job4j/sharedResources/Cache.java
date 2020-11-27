@@ -9,7 +9,7 @@ public class Cache {
             cache = new Cache();
         }
         // Reading and assigning a value occurs in 3 steps (reading, initialization, assignment).
-        // So this is not an atomic value.
+        // So this is not an atomic value .
         return cache;
     }
 
