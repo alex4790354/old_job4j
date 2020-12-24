@@ -20,7 +20,6 @@ public class ParseFile {
         String output = "";
         int data;
         while ((data = i.read()) > 0) {
-
             if (data < paramValue) {
                 output += (char) data;
             }
