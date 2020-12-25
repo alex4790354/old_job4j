@@ -31,12 +31,11 @@
             <version>4.0.1</version>
             <scope>provided</scope> <!-- == we use it only for compelation. Not to run -->
         </dependency>
-        <!--<dependency>
+        <dependency>
             <groupId>net.jcip</groupId>
             <artifactId>jcip-annotations</artifactId>
-            <version>RELEASE</version>
-            <scope>compile</scope>
-        </dependency>-->
+            <version>1.0</version>
+        </dependency>
     </dependencies>
 
 </project>
