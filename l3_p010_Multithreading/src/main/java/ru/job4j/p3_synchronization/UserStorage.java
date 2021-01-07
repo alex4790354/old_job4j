@@ -15,7 +15,7 @@ public class UserStorage {
     private Map<Integer, User> allUsers;
 
     public UserStorage() {
-        this.allUsers = new ConcurrentHashMap<>();
+        this.allUsers = new HashMap<>();
     }
 
     public synchronized boolean add(User user) {
