@@ -24,6 +24,7 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -37,6 +38,7 @@
         <module>l2_p040_tsk1_webProject</module>
         <module>l2_p040_tsk4_JSP_test</module>
 
+        <module>l3_p010_Multithreading</module>
         <module>l3_p020_tsk3_Spring_Data</module>
         <module>l3_p030_tsk1_IO</module>
 
