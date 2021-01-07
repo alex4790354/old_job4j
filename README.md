@@ -1,2 +1,2 @@
-# avasiliev-4 2016-...
+# avasiliev4
 # Alexander Vasiluev
