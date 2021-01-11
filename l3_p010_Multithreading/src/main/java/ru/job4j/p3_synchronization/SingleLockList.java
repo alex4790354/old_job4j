@@ -31,6 +31,6 @@ public class SingleLockList<T> implements Iterable<T> {
 
     @Override
     public synchronized Iterator<T> iterator() {
-        return this.lockedList.iterator();
+        return new ArrayList<>(this.lockedList).iterator();
     }
 }
