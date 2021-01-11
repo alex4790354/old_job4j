@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import static java.util.Collections.copy;
+
 @ThreadSafe
 public class SingleLockList<T> implements Iterable<T> {
 
@@ -31,6 +33,10 @@ public class SingleLockList<T> implements Iterable<T> {
 
     @Override
     public synchronized Iterator<T> iterator() {
-        return new ArrayList<>(this.lockedList).iterator();
+        //return new ArrayList<>(this.lockedList).iterator();
+        // or we can use:
+        List<T> newList = new ArrayList<>();
+        copy(newList, this.lockedList);
+        return newList.iterator();
     }
 }
