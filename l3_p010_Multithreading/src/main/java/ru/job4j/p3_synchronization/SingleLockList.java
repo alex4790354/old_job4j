@@ -20,7 +20,7 @@ public class SingleLockList<T> implements Iterable<T> {
     private List<T> lockedList;
 
     public SingleLockList() {
-        this.lockedList = new ArrayList<T>();
+        this.lockedList = new ArrayList<>();
     }
 
     public synchronized void add(T value) {
@@ -29,6 +29,12 @@ public class SingleLockList<T> implements Iterable<T> {
 
     public synchronized T get(int index) {
         return lockedList.get(index);
+    }
+
+    public synchronized List<T> copySingleLockList() {
+        // v1:  List<T> copyList = new ArrayList<>();
+        //      copyList.addAll(this.lockedList);
+        return new ArrayList<>(this.lockedList);
     }
 
     @Override
