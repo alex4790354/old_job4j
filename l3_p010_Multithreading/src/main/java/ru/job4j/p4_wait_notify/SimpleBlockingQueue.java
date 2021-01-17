@@ -49,6 +49,16 @@ public class SimpleBlockingQueue<T> {
         return result;
     }
 
+    public Boolean isEmpty() {
+        boolean result = false;
+        synchronized (this.queue) {
+            if (this.queue.isEmpty())
+                result = true;
+        }
+        return result;
+    }
+
+
     public static void main(String[] args) {
         SimpleBlockingQueue<Integer> blockingQueue = new SimpleBlockingQueue<>();
 
