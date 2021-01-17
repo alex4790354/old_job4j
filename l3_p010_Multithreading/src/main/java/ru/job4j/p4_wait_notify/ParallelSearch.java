@@ -52,7 +52,7 @@ public class ParallelSearch {
         consumer.start();
 
         while (consumer.isAlive()) {
-            if (!producer.isAlive()) {
+            if (!producer.isAlive() && queue.isEmpty()) {
                 consumer.interrupt();
             }
         }
