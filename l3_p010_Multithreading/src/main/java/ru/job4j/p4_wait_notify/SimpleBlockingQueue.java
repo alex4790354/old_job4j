@@ -9,7 +9,16 @@ public class SimpleBlockingQueue<T> {
 
     @GuardedBy("this")
     private final Queue<T> queue = new LinkedList<>();
-    static final int QUEUE_LIMIT = 4;
+    static int QUEUE_LIMIT;
+
+    public SimpleBlockingQueue() {
+        // default value:
+        SimpleBlockingQueue.QUEUE_LIMIT = 4;
+    }
+
+    public SimpleBlockingQueue(int queue_limit) {
+        SimpleBlockingQueue.QUEUE_LIMIT = queue_limit;
+    }
 
     public void offer(T value) {
         synchronized (this.queue) {
