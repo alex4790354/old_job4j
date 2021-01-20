@@ -9,21 +9,21 @@ public class SimpleBlockingQueue<T> {
 
     @GuardedBy("this")
     private final Queue<T> queue = new LinkedList<>();
-    static int QUEUE_LIMIT;
+    private final int queueLimit;
 
     public SimpleBlockingQueue() {
         // default value:
-        SimpleBlockingQueue.QUEUE_LIMIT = 4;
+        this.queueLimit = 4;
     }
 
-    public SimpleBlockingQueue(int queue_limit) {
-        SimpleBlockingQueue.QUEUE_LIMIT = queue_limit;
+    public SimpleBlockingQueue(int value) {
+        this.queueLimit = value;
     }
 
     public void offer(T value) {
         synchronized (this.queue) {
             try {
-                while (queue.size() > QUEUE_LIMIT) {
+                while (queue.size() > queueLimit) {
                     //System.out.println("offer -> wait mode");
                     this.queue.wait();
                 }
