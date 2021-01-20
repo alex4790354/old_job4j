@@ -6,6 +6,7 @@ import net.jcip.annotations.ThreadSafe;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static java.util.Collections.copy;
 
@@ -32,9 +33,11 @@ public class SingleLockList<T> implements Iterable<T> {
     }
 
     public synchronized List<T> copySingleLockList() {
-        // v1:  List<T> copyList = new ArrayList<>();
-        //      copyList.addAll(this.lockedList);
-        return new ArrayList<>(this.lockedList);
+        List<T> copy = new ArrayList<>();
+        for (T value : this.lockedList) {
+            copy.add(value);
+        }
+        return copy;
     }
 
     @Override
