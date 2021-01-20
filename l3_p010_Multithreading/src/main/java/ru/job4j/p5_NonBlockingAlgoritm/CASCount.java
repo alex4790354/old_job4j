@@ -22,13 +22,7 @@ public class CASCount {
     }
 
     public int getCount() {
-        Integer temp;
-        Integer current;
-        do {
-            current = count.get();
-            temp = current;
-        } while (!count.compareAndSet(current, temp));
-        return current;
+        return count.get();
     }
 
 }
