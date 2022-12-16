@@ -13,7 +13,7 @@
 
     <properties>
         <hibernate-version>5.3.7.Final</hibernate-version>
-        <spring-framework-version>5.1.1.RELEASE</spring-framework-version>
+        <spring-framework-version>5.2.20.RELEASE</spring-framework-version>
         <spring-data-version>Gosling-RELEASE</spring-data-version>
     </properties>
 
